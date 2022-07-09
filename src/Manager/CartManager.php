@@ -23,13 +23,13 @@ class CartManager
      * CartManager constructor.
      */
     public function __construct(
-        CartSessionStorage $cartSessionStorage,
+        CartSessionStorage $cartStorage,
         OrderFactory $orderFactory,
         EntityManagerInterface $entityManager
-    ){
-        this->cartSessionStorage = $cartSessionStorage;
-        this->cartFactory = $orderFactory;
-        this->entityManager = $entityManager;
+    ) {
+        $this->cartSessionStorage = $cartStorage;
+        $this->cartFactory = $orderFactory;
+        $this->entityManager = $entityManager;
     }
     /**
      * Gets the current cart.
