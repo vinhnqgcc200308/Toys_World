@@ -17,7 +17,6 @@ class CustomerType extends AbstractType
             ->add('address')
             ->add('telephone')
             ->add('birth')
-            ->add('user')
         ;
     }
 
