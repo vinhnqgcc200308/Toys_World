@@ -1,4 +1,70 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+
+<div class="container">
+
+		<div class="row">
+			<div class="col-md-10 ml-md-auto">
+
+				<div class="card bg-light mb-3 mt-5" style="width: 800px">
+
+					<div class="card-body">
+						<div class="card-header mb-3">Edit Comment</div>
+
+						{{ form_start(form) }}
+                        <div class="form_group">
+
+							<div class="col-md-12 mb-3">
+
+								{{ form_row(form.date, {'attr': {'class':
+
+              'form-control'}}) }}
+
+							</div>
+
+						</div>
+						<div class="form_group">
+
+							<div class="col-md-12 mb-3">
+
+								{{ form_row(form.customer, {'attr': {'class':
+
+              'form-control'}}) }}
+
+							</div>
+
+						</div>
+
+						<div class="form_group">
+
+							<div class="col-md-12 mb-3">
+
+								{{ form_row(form.description, {'attr': {'class':
+
+              'form-control'}}) }}
+
+							</div>
+
+						</div>
+						<div class="form_group" style = "text-align:center;">
+
+							<div class="col-md-12 mb-3">
+
+								<button type="submit" class="btn btn-dark">
+									Update
+								</button>
+							</div>
+
+						</div>
+						
+
+						{{ form_end(form) }}
+						
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
