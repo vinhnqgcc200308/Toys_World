@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Comment{% endblock %}
+
+{% block body %}
+    <div class ="container" style="padding-top:80px;">
+    <button class="btn btn-dark" width="30px">
+        <a href="{{ asset('/comment')}}" style = "text-decoration: none; color:white">Return</a>
+    </button>
+
+    {{ include('comment/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('comment/_delete_form.html.twig') }}
+</div>
+{% endblock %}

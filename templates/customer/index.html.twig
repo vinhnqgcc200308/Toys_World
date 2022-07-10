@@ -1,0 +1,48 @@
+{% extends 'baseadmin.html.twig' %}
+
+
+{% block body %}
+    <h1 >Customer</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gmail</th>
+                <th>Address</th>
+                <th>Telephone</th>
+                <th>Birth</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+            <tr>
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.gmail }}</td>
+                <td>{{ customer.address }}</td>
+                <td>{{ customer.telephone }}</td>
+                <td>{{ customer.birth ? customer.birth|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_customer_show', {'id': customer.id}) }}">
+                        <span class="material-icons">visibility</span>
+                    </a>
+                    </br>
+                    <a href="{{ path('app_customer_edit', {'id': customer.id}) }}">
+                        <span class="material-icons">edit</span>
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Nothing</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <a href="{{ path('app_customer_new') }}"><span class="material-icons">add_circle</span></a>
+{% endblock %}

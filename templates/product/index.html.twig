@@ -1,0 +1,52 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Product index{% endblock %}
+
+{% block body %}
+    <h1>Product index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Stock</th>
+                <th>Supplierprice</th>
+                <th>Exportprice</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.date ? product.date|date('Y-m-d') : '' }}</td>
+                <td>{{ product.stock }}</td>
+                <td>{{ product.supplierprice }}</td>
+                <td>{{ product.exportprice }}</td>
+                <td>{{ product.description }}</td>
+                <td><img src="{{vich_uploader_asset(product,'imageFile')}}" arr width="50" height="50"></td>
+                <td>
+                    <a href="{{ path('app_product_show', {'id': product.id}) }}">
+                        <span class="material-icons">visibility</span>
+                    </a>
+                    </br>
+                    <a href="{{ path('app_product_edit', {'id': product.id}) }}">
+                        <span class="material-icons">edit</span>
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">Nothing</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_product_new') }}"><span class="material-icons">add_circle</span></a>
+{% endblock %}

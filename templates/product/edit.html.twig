@@ -1,0 +1,12 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Edit Product{% endblock %}
+
+{% block body %}
+    <h1>Edit Product</h1>
+    <a href="{{ path('app_product_index') }}"><span class="material-icons">arrow_back</span></a>
+    <br>
+    {{ include('product/_delete_form.html.twig') }}
+    {{ include('product/_form.html.twig', {'button_label': ''}) }}
+
+{% endblock %}

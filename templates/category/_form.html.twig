@@ -1,4 +1,18 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+<div>
+    <div class="row col-sm-3">
+            <div class="col">
+                {{ form_label(form.name) }}
+                {{ form_widget(form.name, {'attr': {'class' :'form-control input-sm'} }) }}
+            </div>
+            <div class="col">
+                {{ form_label(form.description) }}
+                {{ form_widget(form.description, {'attr': {'class' :'form-control input-sm'} }) }}
+            </div>
+    </div>
+</div>
+<div>
+    </br></br></br></br></br></br>
+    <button><span class="material-icons" style="font-size:30px; ">save</span>{{ button_label|default('') }}</button>
+</div>
 {{ form_end(form) }}

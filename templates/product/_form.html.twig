@@ -1,0 +1,43 @@
+{{ form_start(form) }}
+<div>
+	<div class="row col-sm-3">
+		<div class="col">
+			{{ form_label(form.name) }}
+			{{ form_widget(form.name, {'attr': {'class' :'form-control input-sm'} }) }}
+		</div>
+		<div class="col">
+			{{ form_label(form.date) }}
+			{{ form_widget(form.date) }}
+		</div>
+		<div class="col">
+			{{ form_label(form.stock) }}
+			{{ form_widget(form.stock, {'attr': {'class' :'form-control input-sm'} }) }}
+		</div>
+		<div class="col">
+			{{ form_label(form.supplierprice) }}
+			{{ form_widget(form.supplierprice, {'attr': {'class' :'form-control input-sm'} }) }}
+		</div>
+        <div class="col">
+			{{ form_label(form.exportprice) }}
+			{{ form_widget(form.exportprice, {'attr': {'class' :'form-control input-sm'} }) }}
+		</div>
+        <div class="col">
+			{{ form_label(form.description) }}
+			{{ form_widget(form.description, {'attr': {'class' :'form-control input-sm'} }) }}
+		</div>
+       <div class="col">
+			{{ form_label(form.supplier) }}
+			{{ form_widget(form.supplier, {'attr': {'class' :'form-control input-sm'} }) }}
+		</div>
+        <div class="col">
+			{{ form_label(form.category) }}
+			{{ form_widget(form.category, {'attr': {'class' :'form-control input-sm'} }) }}
+		</div>
+        <div class="col" >
+			{{ form_label(form.imageFile)}}
+			{{ form_widget(form.imageFile)}}
+		</div>
+	</div>
+</div>
+<div></br></br></br></br></br></br></br></br></br></br> </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<button> <span class="material-icons" style="font-size:30px; ">save</span> {{ button_label|default('') }}</button></div>{{ form_end(form) }}

@@ -1,0 +1,26 @@
+{{ form_start(form) }}
+<div>
+    <div class="row col-sm-3">
+            <div class="col">
+                {{ form_label(form.name) }}
+                {{ form_widget(form.name, {'attr': {'class' :'form-control input-sm'} }) }}
+            </div>
+            <div class="col">
+                {{ form_label(form.address) }}
+                {{ form_widget(form.address, {'attr': {'class' :'form-control input-sm'} }) }}
+            </div>
+               <div class="col">
+                {{ form_label(form.email) }}
+                {{ form_widget(form.email, {'attr': {'class' :'form-control input-sm'} }) }}
+            </div>
+               <div class="col">
+                {{ form_label(form.telephone) }}
+                {{ form_widget(form.telephone, {'attr': {'class' :'form-control input-sm'} }) }}
+            </div>
+    </div>
+</div>
+<div>
+    </br></br></br></br></br></br></br></br></br></br></br></br>
+    <button><span class="material-icons" style="font-size:30px; ">save</span>{{ button_label|default('') }}</button>
+</div>
+{{ form_end(form) }}
