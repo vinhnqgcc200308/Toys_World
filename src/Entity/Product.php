@@ -64,7 +64,6 @@ class Product
      * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
      * @var File
      */
-    #[Vich\UploadableField(mapping: 'product_images', fileNameProperty: 'image')]
     private $imageFile;
 
     public function __construct()

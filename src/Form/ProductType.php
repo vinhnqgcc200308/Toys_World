@@ -29,7 +29,7 @@ class ProductType extends AbstractType
                 'download_label' => '...',
                 'download_uri' => true,
                 'image_uri' => true,
-                'asset_helper' => true,
+                'asset_helper' => true
             ])
         ;
     }
